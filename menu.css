@@ -1,0 +1,316 @@
+/*NAV*/
+
+h2 {
+    vertical-align: center;
+    text-align: center;
+  }
+  
+  html, body {
+    margin: 0;
+    height: 100%;
+    background-image: url(img/fondo_pagina.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  
+  * {
+    font-family: "Raleway";
+    box-sizing: border-box;
+  }
+  
+  .top-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(239, 228, 212, .5);
+    height: 50px;
+    padding: 1em;
+  }
+  .top-nav h1{
+    font-family: 'Fraunces';
+    color: #556b2f;
+    font-weight: lighter;
+    font-size: 250%;
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu > li {
+    margin: 0 1rem;
+    overflow: hidden;
+  }
+  
+  .menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  .menu-button,
+  .menu-button::before,
+  .menu-button::after {
+    display: block;
+    background-color: #556b2f;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+  }
+  
+  .menu-button::before {
+    content: '';
+    margin-top: -8px;
+  }
+  
+  .menu-button::after {
+    content: '';
+    margin-top: 8px;
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+  }
+  
+  @media (max-width: 700px) {
+    .menu-button-container {
+      display: flex;
+    }
+    .menu {
+      position: absolute;
+      top: 0;
+      margin-top: 50px;
+      left: 0;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    #menu-toggle ~ .menu li {
+      height: 0;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    #menu-toggle:checked ~ .menu li {
+      height: 2.5em;
+      padding: 0.5em;
+      transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .menu > li {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0.5em 0;
+      width: 100%;
+      color: #efe4d4;
+      background-color: rgb(239, 228, 212);
+    }
+    .menu > li:not(:last-child) {
+      border-bottom: 1px solid rgba(239, 228, 212);
+    }
+    main p{
+      font-size: 16px;
+      line-height: 130%;
+    }
+  }
+.titpag{
+  width:100%;
+  color:#556b2f;
+  padding-left: 5%;
+}
+
+nav a{
+  color: #556b2f;
+  text-decoration: none;
+  transition: .5s;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.te{
+  background-image:url(img/pexels-nikolay-osmachko-230477.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 100%;
+  height: 250px;
+  max-height: 250px;
+}
+.tet h2{
+  font-family: 'Fleur de Leah','Fraunces';
+  color: #ffffff;
+  font-weight: lighter;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 400%;
+}
+.tet{
+  background-color:#151618;
+  color: #efe4d4;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0% 2%;
+  line-height: 130%;
+}
+
+.tortas{
+  background-image:url(img/pexels-lisa-fotios-907142.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 100%;
+  height: 250px;
+  max-height: 250px;
+}
+.tortast{
+  background-color:#151618;
+  color: #efe4d4;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  line-height: 130%;
+  
+}
+.tortast h2{
+  font-family: 'Fleur de Leah', 'Fraunces';
+  color: #ffffff;
+  font-weight: lighter;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 400%;
+
+}
+
+.tartas{
+  background-image: url(img/pexels-svetlana-b-3913295.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 100%;
+  height: 250px;
+  max-height: 250px;
+}
+.tartast h2{
+  font-family: 'Fleur de Leah', 'Fraunces';
+  color: #ffffff;
+  font-weight: lighter;
+  display: flex;
+  justify-content: center;
+  font-size: 400%;
+}
+.tartast{
+  background-color:#151618;
+  color: #efe4d4;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  line-height: 130%;
+}
+
+.sandwich{
+  background-image: url(img/pexels-rodnae-productions-6529877.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 100%;
+  height: 250px;
+  max-height: 250px;
+}
+
+.sandwicht h2{
+  font-family: 'Fleur de Leah', 'Fraunces';
+  color: #ffffff;
+  font-weight: lighter;
+  display: flex;
+  justify-content: center;
+  font-size: 350%;
+}
+.sandwicht{
+  background-color:#151618;
+  color: #efe4d4;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  line-height: 130%;
+}
+.menuej{
+  background-image: url(img/pexels-lisa-fotios-1279330.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 100%;
+  height: 250px;
+  max-height: 250px;
+}
+.menuejt h2{
+  font-family: 'Fleur de Leah', 'Fraunces';
+  color: #ffffff;
+  font-weight: lighter;
+  display: flex;
+  justify-content: center;
+  font-size: 350%;
+  padding: 0% 2%;
+}
+.menuejt{
+  background-color:#151618;
+  color: #efe4d4;
+  width: 100%;
+  text-align: center;
+  line-height: 130%;
+  padding: 0% 2%;
+}
+.menuejct p{
+  padding: 2%;
+}
+footer{
+  background-color:#b07946;
+  color:#efe4d4;
+  font-family: 'Fraunces';
+  display: flex;
+  flex-direction:column-reverse;
+  justify-content: center;
+  padding-left: 5%;
+  font-weight: bold;
+  font-size: 80%;
+}
+footer a{
+  color: #efe4d4;
+  text-decoration: none;
+}
